@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>所有地點地圖（All Locations Map）— 東北夏日自駕之旅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="trip.css">
+</head>
+<body>
+
+  <nav class="trip-nav">
+    <a href="../../index.html" class="trip-nav-brand">旅行計畫（Travel Plans）</a>
+    <div class="trip-nav-links">
+      <a href="index.html" class="trip-nav-link">&larr; 回 Tohoku 行程（Back to Trip）</a>
+      <a href="../../index.html" class="trip-nav-back">回首頁（Home）</a>
+    </div>
+  </nav>
+
+  <section class="trip-section map-page-header">
+    <h1 class="map-page-title">所有地點地圖（All Locations Map）</h1>
+    <p class="map-page-subtitle">東北夏日自駕之旅中所有城市與景點的地圖總覽</p>
+  </section>
+
+  <section class="trip-section map-embed-section">
+    <div class="map-embed-wrap">
+      <div id="trip-map"></div>
+    </div>
+    <p class="map-embed-caption">點選地圖上的標記可查看地點名稱，並連結到 Google 地圖</p>
+  </section>
+
+  <section class="trip-section map-list-section">
+    <h2 class="trip-section-title">路線城市（Route Cities）</h2>
+    <div class="map-grid">
+      <div class="map-card">
+        <p class="map-card-name">花卷（Hanamaki）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Hanamaki%2C+Iwate%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">角館（Kakunodate）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Kakunodate%2C+Akita%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">十和田湖（Lake Towada）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Lake+Towada%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">八戶（Hachinohe）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Hachinohe%2C+Aomori%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">青森（Aomori）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Aomori%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trip-section map-list-section">
+    <h2 class="trip-section-title">景點與亮點（Highlights &amp; Stops）</h2>
+    <div class="map-grid">
+      <div class="map-card">
+        <p class="map-card-name">角館武家屋敷（Kakunodate Samurai District）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Kakunodate+Samurai+District%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">田澤湖（Lake Tazawa）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Lake+Tazawa%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">御座石神社（Goza no Ishi Shrine）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Goza+no+Ishi+Shrine%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">丸館食堂（Marukan Cafeteria）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Marukan+Cafeteria%2C+Hanamaki%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">奧入瀨溪流（Oirase Gorge）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Oirase+Gorge%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">十和田神社（Towada Shrine）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Towada+Shrine%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">城倉大橋（Jogakura Bridge）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Jogakura+Bridge%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">八食中心（Hasshoku Center）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Hasshoku+Center%2C+Hachinohe%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">蕪島神社（Kabushima Shrine）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Kabushima+Shrine%2C+Hachinohe%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">A-FACTORY</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=A-FACTORY%2C+Aomori%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">Yoraiso（よらいそ）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Yoraiso%2C+Hanamaki%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+      <div class="map-card">
+        <p class="map-card-name">Miroku Yokocho（みろく橫丁）</p>
+        <a class="map-card-link" href="https://www.google.com/maps/search/?api=1&query=Miroku+Yokocho%2C+Hachinohe%2C+Japan" target="_blank" rel="noopener">在 Google 地圖開啟 &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="trip-footer">
+    <p class="trip-footer-date">2026年8月</p>
+    <p class="trip-footer-credit">由 TY &amp; W 設計策劃</p>
+    <p class="trip-footer-tagline">收藏回憶，而非物品。</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var locations = [
+      { name: "花卷（Hanamaki）", lat: 39.3936, lng: 141.1128, query: "Hanamaki, Iwate, Japan" },
+      { name: "角館（Kakunodate）", lat: 39.5985, lng: 140.5654, query: "Kakunodate, Akita, Japan" },
+      { name: "十和田湖（Lake Towada）", lat: 40.4636, lng: 140.8631, query: "Lake Towada, Japan" },
+      { name: "八戶（Hachinohe）", lat: 40.5122, lng: 141.4886, query: "Hachinohe, Aomori, Japan" },
+      { name: "青森（Aomori）", lat: 40.8244, lng: 140.7400, query: "Aomori, Japan" },
+      { name: "角館武家屋敷（Kakunodate Samurai District）", lat: 39.5989, lng: 140.5636, query: "Kakunodate Samurai District, Japan" },
+      { name: "田澤湖（Lake Tazawa）", lat: 39.7217, lng: 140.6714, query: "Lake Tazawa, Japan" },
+      { name: "御座石神社（Goza no Ishi Shrine）", lat: 39.7241, lng: 140.6721, query: "Goza no Ishi Shrine, Japan" },
+      { name: "丸館食堂（Marukan Cafeteria）", lat: 39.7050, lng: 140.6600, query: "Marukan Cafeteria, Japan" },
+      { name: "奧入瀨溪流（Oirase Gorge）", lat: 40.5236, lng: 140.9319, query: "Oirase Gorge, Japan" },
+      { name: "十和田神社（Towada Shrine）", lat: 40.4667, lng: 140.8797, query: "Towada Shrine, Japan" },
+      { name: "城倉大橋（Jogakura Bridge）", lat: 40.6672, lng: 140.8306, query: "Jogakura Bridge, Japan" },
+      { name: "八食中心（Hasshoku Center）", lat: 40.5285, lng: 141.4894, query: "Hasshoku Center, Hachinohe, Japan" },
+      { name: "蕪島神社（Kabushima Shrine）", lat: 40.5423, lng: 141.5389, query: "Kabushima Shrine, Hachinohe, Japan" },
+      { name: "A-FACTORY", lat: 40.8283, lng: 140.7409, query: "A-FACTORY, Aomori, Japan" },
+      { name: "Yoraiso（よらいそ）", lat: 39.3931, lng: 141.1122, query: "Yoraiso, Hanamaki, Japan" },
+      { name: "Miroku Yokocho（みろく橫丁）", lat: 40.5122, lng: 141.4897, query: "Miroku Yokocho, Hachinohe, Japan" }
+    ];
+
+    var map = L.map('trip-map').setView([40.2, 140.9], 8);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var bounds = [];
+    locations.forEach(function (place) {
+      var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.query);
+      var popupHtml = '<strong>' + place.name + '</strong><br>' +
+        '<a href="' + mapsUrl + '" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>';
+      L.marker([place.lat, place.lng]).addTo(map).bindPopup(popupHtml);
+      bounds.push([place.lat, place.lng]);
+    });
+
+    map.fitBounds(bounds, { padding: [24, 24] });
+  </script>
+
+</body>
+</html>
