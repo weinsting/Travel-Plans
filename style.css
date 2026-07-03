@@ -1,0 +1,243 @@
+/* ---------------------------------------------
+   Travel Plans — Japanese editorial style sheet
+--------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #faf8f4;
+  color: #2b2926;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------
+   Hero
+--------------------------------------------- */
+
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://picsum.photos/seed/travel-plans-hero/1920/1080');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 18, 16, 0.35) 0%, rgba(20, 18, 16, 0.55) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #faf8f4;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-byline {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------
+   Intro
+--------------------------------------------- */
+
+.intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 96px 24px 64px;
+  text-align: center;
+  font-size: 1.15rem;
+  color: #4a453f;
+}
+
+/* ---------------------------------------------
+   Journeys
+--------------------------------------------- */
+
+.journeys {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+.section-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #8a8177;
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+
+.journeys-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.card {
+  display: block;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Featured card spans full width, sits above the two smaller cards */
+.card--featured {
+  grid-column: 1 / -1;
+}
+
+.card--featured .card-image {
+  height: 420px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 28px 32px 32px;
+}
+
+.card--featured .card-body {
+  text-align: center;
+  padding: 32px 32px 40px;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a89f8f;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.card--featured .card-title {
+  font-size: 2rem;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: #8a8177;
+  margin-bottom: 6px;
+}
+
+.card-route {
+  font-size: 0.95rem;
+  color: #4a453f;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #2b2926;
+  padding-bottom: 2px;
+}
+
+/* Smaller "coming soon" cards — muted / semi-transparent treatment */
+.card--muted {
+  opacity: 0.55;
+  filter: grayscale(30%);
+}
+
+.card--muted .card-image {
+  height: 180px;
+}
+
+.card--muted .card-body {
+  padding: 20px 24px 24px;
+}
+
+.card--muted .card-title {
+  font-size: 1.15rem;
+}
+
+.card--muted .card-meta {
+  font-style: italic;
+}
+
+/* ---------------------------------------------
+   Footer
+--------------------------------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 48px 24px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: #8a8177;
+  border-top: 1px solid #e8e3d9;
+}
+
+/* ---------------------------------------------
+   Responsive
+--------------------------------------------- */
+
+@media (max-width: 720px) {
+  .journeys-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card--featured .card-image {
+    height: 280px;
+  }
+
+  .intro {
+    padding: 64px 24px 48px;
+  }
+}
