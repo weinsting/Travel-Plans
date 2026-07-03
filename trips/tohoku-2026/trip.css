@@ -242,6 +242,30 @@ h1, h2, h3 {
   color: #6b6d78;
 }
 
+.day-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-top: 20px;
+}
+
+.day-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #3f4149;
+}
+
+.day-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 .map-list-section {
   padding-top: 40px;
 }
@@ -264,8 +288,22 @@ h1, h2, h3 {
 }
 
 .map-card-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+.map-card-name .day-dot {
+  margin-right: 0;
+}
+
+.map-card-day {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8b8d98;
+  white-space: nowrap;
 }
 
 .map-card-link {
