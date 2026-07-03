@@ -1,0 +1,64 @@
+/* Tohoku Road Trip 2026 — self-contained trip page styles.
+   Independent from the homepage's style.css by design. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: #fafafa;
+  color: #14151a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.trip-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 140px 24px;
+  text-align: center;
+}
+
+.trip-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8b8d98;
+  margin-bottom: 16px;
+}
+
+.trip-page h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.trip-page p {
+  font-family: 'Inter', sans-serif;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.trip-back-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #14151a;
+  border-bottom: 1px solid #14151a;
+  padding-bottom: 2px;
+}
