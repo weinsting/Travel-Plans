@@ -1,5 +1,6 @@
 /* ---------------------------------------------
-   Travel Plans — Japanese editorial style sheet
+   Travel Plans — premium product-style sheet
+   Typography: Manrope (headings) / Inter (body, cards, nav)
 --------------------------------------------- */
 
 * {
@@ -9,16 +10,23 @@
 }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  background: #faf8f4;
-  color: #2b2926;
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: #fafafa;
+  color: #14151a;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
 
 /* ---------------------------------------------
@@ -40,37 +48,29 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 18, 16, 0.35) 0%, rgba(20, 18, 16, 0.55) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.6) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: #faf8f4;
+  color: #ffffff;
   padding: 0 24px;
 }
 
-.hero-eyebrow {
-  letter-spacing: 0.35em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  opacity: 0.9;
-}
-
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
 }
 
-.hero-byline {
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.85;
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------------------------------------------
@@ -82,8 +82,8 @@ a {
   margin: 0 auto;
   padding: 96px 24px 64px;
   text-align: center;
-  font-size: 1.15rem;
-  color: #4a453f;
+  font-size: 1.1rem;
+  color: #4b4d57;
 }
 
 /* ---------------------------------------------
@@ -97,28 +97,27 @@ a {
 }
 
 .section-label {
-  font-size: 0.85rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  font-size: 1.5rem;
   text-align: center;
-  color: #8a8177;
+  color: #14151a;
   margin-bottom: 48px;
-  font-weight: 400;
 }
 
 .journeys-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 24px;
 }
 
 .card {
   display: block;
+  font-family: 'Inter', sans-serif;
   background: #ffffff;
-  border-radius: 4px;
+  border: 1px solid #eceef1;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 1px 2px rgba(16, 16, 20, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Featured card spans full width, sits above the two smaller cards */
@@ -131,8 +130,8 @@ a {
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 16, 20, 0.08);
 }
 
 .card-image {
@@ -151,48 +150,54 @@ a {
 }
 
 .card-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #a89f8f;
+  color: #8b8d98;
   margin-bottom: 10px;
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: -0.2px;
   margin-bottom: 8px;
 }
 
 .card--featured .card-title {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .card-meta {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 0.9rem;
-  color: #8a8177;
+  color: #6b6d78;
   margin-bottom: 6px;
 }
 
 .card-route {
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  color: #4a453f;
+  color: #3f4149;
   margin-bottom: 20px;
 }
 
 .card-link {
   display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-bottom: 1px solid #2b2926;
+  border-bottom: 1px solid #14151a;
   padding-bottom: 2px;
 }
 
-/* Smaller "coming soon" cards — muted / semi-transparent treatment */
+/* Smaller "coming soon" cards — muted treatment */
 .card--muted {
-  opacity: 0.55;
-  filter: grayscale(30%);
+  opacity: 0.6;
 }
 
 .card--muted .card-image {
@@ -204,11 +209,7 @@ a {
 }
 
 .card--muted .card-title {
-  font-size: 1.15rem;
-}
-
-.card--muted .card-meta {
-  font-style: italic;
+  font-size: 1.1rem;
 }
 
 /* ---------------------------------------------
@@ -218,10 +219,10 @@ a {
 .site-footer {
   text-align: center;
   padding: 48px 24px;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  color: #8a8177;
-  border-top: 1px solid #e8e3d9;
+  color: #8b8d98;
+  border-top: 1px solid #eceef1;
 }
 
 /* ---------------------------------------------
