@@ -28,6 +28,9 @@
   <section class="trip-section map-embed-section">
     <div class="map-embed-wrap">
       <div id="trip-map"></div>
+      <noscript>
+        <p class="map-fallback-message">此地圖需要 JavaScript 才能顯示，請改用下方清單的連結查看各地點。</p>
+      </noscript>
     </div>
     <p class="map-embed-caption">點選地圖上的標記可查看地點名稱，並連結到 Google 地圖</p>
   </section>
@@ -140,23 +143,35 @@
       { name: "Miroku Yokocho（みろく橫丁）", lat: 40.5122, lng: 141.4897, query: "Miroku Yokocho, Hachinohe, Japan" }
     ];
 
-    var map = L.map('trip-map').setView([40.2, 140.9], 8);
+    try {
+      if (typeof L === 'undefined') {
+        throw new Error('Leaflet failed to load');
+      }
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+      var map = L.map('trip-map').setView([40.2, 140.9], 8);
 
-    var bounds = [];
-    locations.forEach(function (place) {
-      var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.query);
-      var popupHtml = '<strong>' + place.name + '</strong><br>' +
-        '<a href="' + mapsUrl + '" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>';
-      L.marker([place.lat, place.lng]).addTo(map).bindPopup(popupHtml);
-      bounds.push([place.lat, place.lng]);
-    });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-    map.fitBounds(bounds, { padding: [24, 24] });
+      var bounds = [];
+      locations.forEach(function (place) {
+        var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.query);
+        var popupHtml = '<strong>' + place.name + '</strong><br>' +
+          '<a href="' + mapsUrl + '" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>';
+        L.marker([place.lat, place.lng]).addTo(map).bindPopup(popupHtml);
+        bounds.push([place.lat, place.lng]);
+      });
+
+      map.fitBounds(bounds, { padding: [24, 24] });
+    } catch (err) {
+      var mapEl = document.getElementById('trip-map');
+      mapEl.innerHTML =
+        '<div class="map-fallback-message">' +
+        '地圖載入失敗（可能是瀏覽器擴充功能封鎖了地圖資源），請改用下方清單的連結查看各地點。' +
+        '</div>';
+    }
   </script>
 
 </body>
