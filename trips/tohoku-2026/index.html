@@ -22,25 +22,38 @@
   <header class="trip-hero">
     <div class="trip-hero-overlay"></div>
     <div class="trip-hero-content">
-      <h1>東北夏日自駕之旅（Tohoku Summer Road Trip）</h1>
-      <p class="trip-hero-dates">2026年8月5日 &ndash; 8月12日</p>
-      <p class="trip-hero-meta">8天｜兩人旅行｜自駕</p>
-      <p class="trip-hero-route">岩手・秋田・青森（Iwate・Akita・Aomori）</p>
+      <h1 class="trip-hero-title">TOHOKU ROAD TRIP</h1>
+      <p class="trip-hero-dates">August 5 &ndash; 12, 2026</p>
+      <p class="trip-hero-meta">8 Days ・ Self Drive ・ TY &amp; W</p>
+      <p class="trip-hero-tagline">A summer journey through Aomori, Akita and Iwate.</p>
     </div>
   </header>
+
+  <section class="trip-section status-section">
+    <h2 class="trip-section-title">規劃進度（Planning Status）</h2>
+    <div class="status-card">
+      <ul class="status-list">
+        <li class="status-item status-item--done"><span class="status-icon"></span>航班已訂</li>
+        <li class="status-item status-item--done"><span class="status-icon"></span>路線已確定</li>
+        <li class="status-item status-item--done"><span class="status-icon"></span>飯店已選定</li>
+        <li class="status-item status-item--pending"><span class="status-icon"></span>租車尚未預約</li>
+        <li class="status-item status-item--pending"><span class="status-icon"></span>ETC 卡尚未申請</li>
+      </ul>
+    </div>
+  </section>
 
   <section class="trip-section route-section">
     <h2 class="trip-section-title">路線總覽（Route Overview）</h2>
     <div class="route-flow">
-      <div class="route-step">花卷（Hanamaki）</div>
+      <div class="route-step">花卷</div>
       <div class="route-arrow">&darr;</div>
-      <div class="route-step">角館（Kakunodate）</div>
+      <div class="route-step">角館</div>
       <div class="route-arrow">&darr;</div>
-      <div class="route-step">十和田湖（Lake Towada）</div>
+      <div class="route-step">十和田湖</div>
       <div class="route-arrow">&darr;</div>
-      <div class="route-step">八戶（Hachinohe）</div>
+      <div class="route-step">八戶</div>
       <div class="route-arrow">&darr;</div>
-      <div class="route-step">青森（Aomori）</div>
+      <div class="route-step">青森</div>
     </div>
     <p class="route-distance">預估總駕駛距離：約 500 公里</p>
     <p class="route-map-link"><a href="map.html">查看所有地點地圖總覽（View All Locations Map）&rarr;</a></p>
@@ -48,43 +61,32 @@
 
   <section class="trip-section accommodation-section">
     <h2 class="trip-section-title">住宿總覽（Accommodation Summary）</h2>
-    <div class="accommodation-card">
-      <table class="accommodation-table">
-        <thead>
-          <tr>
-            <th>日期</th>
-            <th>地點</th>
-            <th>飯店</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="日期">8/5</td>
-            <td data-label="地點">花卷</td>
-            <td data-label="飯店">Hotel Grand Ciel Hanamaki</td>
-          </tr>
-          <tr>
-            <td data-label="日期">8/6</td>
-            <td data-label="地點">角館</td>
-            <td data-label="飯店">Machiya Hotel Kakunodate</td>
-          </tr>
-          <tr>
-            <td data-label="日期">8/7&ndash;8/8</td>
-            <td data-label="地點">十和田湖</td>
-            <td data-label="飯店">Lakeside Inn Nagomi</td>
-          </tr>
-          <tr>
-            <td data-label="日期">8/9&ndash;8/10</td>
-            <td data-label="地點">八戶</td>
-            <td data-label="飯店">APA Hotel Honhachinohe</td>
-          </tr>
-          <tr>
-            <td data-label="日期">8/11</td>
-            <td data-label="地點">青森</td>
-            <td data-label="飯店">Daiwa Roynet Hotel Aomori</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="accommodation-grid">
+      <div class="accommodation-item">
+        <p class="accommodation-date">8/5</p>
+        <p class="accommodation-location">花卷</p>
+        <p class="accommodation-hotel">Hotel Grand Ciel Hanamaki</p>
+      </div>
+      <div class="accommodation-item">
+        <p class="accommodation-date">8/6</p>
+        <p class="accommodation-location">角館</p>
+        <p class="accommodation-hotel">Machiya Hotel Kakunodate</p>
+      </div>
+      <div class="accommodation-item">
+        <p class="accommodation-date">8/7&ndash;8/8</p>
+        <p class="accommodation-location">十和田湖</p>
+        <p class="accommodation-hotel">Lakeside Inn Nagomi</p>
+      </div>
+      <div class="accommodation-item">
+        <p class="accommodation-date">8/9&ndash;8/10</p>
+        <p class="accommodation-location">八戶</p>
+        <p class="accommodation-hotel">APA Hotel Honhachinohe</p>
+      </div>
+      <div class="accommodation-item">
+        <p class="accommodation-date">8/11</p>
+        <p class="accommodation-location">青森</p>
+        <p class="accommodation-hotel">Daiwa Roynet Hotel Aomori</p>
+      </div>
     </div>
   </section>
 
@@ -94,125 +96,241 @@
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 1 天</span>
-          <span class="day-date">8月5日</span>
+          <span class="day-number">DAY 1</span>
+          <span class="day-date">AUG 05</span>
         </div>
         <p class="day-route">桃園 &rarr; 花卷</p>
-        <ul class="day-activities">
-          <li>台灣虎航 IT258（Tigerair IT258）</li>
-          <li>抵達花卷機場</li>
-          <li>入境審查</li>
-          <li>在 Yoraiso 用晚餐</li>
-          <li>飯店入住</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>&#9992; 台灣虎航 IT258</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>抵達花卷機場</li>
+              <li>入境審查</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>&#127858; Yoraiso 晚餐</li>
+              <li>&#127968; Hotel Grand Ciel Hanamaki</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 花卷</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 2 天</span>
-          <span class="day-date">8月6日</span>
+          <span class="day-number">DAY 2</span>
+          <span class="day-date">AUG 06</span>
         </div>
         <p class="day-route">花卷 &rarr; 角館</p>
-        <ul class="day-activities">
-          <li>取租賃車</li>
-          <li>丸館食堂（Marukan Cafeteria）</li>
-          <li>田澤湖（Lake Tazawa）</li>
-          <li>御座石神社（Goza no Ishi Shrine）</li>
-          <li>前往角館</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>取租賃車</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>&#127858; 丸館食堂</li>
+              <li>田澤湖</li>
+              <li>御座石神社</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>&#127968; Machiya Hotel Kakunodate</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 角館</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 3 天</span>
-          <span class="day-date">8月7日</span>
+          <span class="day-number">DAY 3</span>
+          <span class="day-date">AUG 07</span>
         </div>
         <p class="day-route">角館 &rarr; 十和田湖</p>
-        <ul class="day-activities">
-          <li>角館武家屋敷（Kakunodate Samurai District）</li>
-          <li>在鎮上用午餐</li>
-          <li>向北行駛</li>
-          <li>入住十和田湖</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>角館武家屋敷</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>鎮上午餐</li>
+              <li>向北行駛</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>&#127968; Lakeside Inn Nagomi</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 十和田湖</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 4 天</span>
-          <span class="day-date">8月8日</span>
+          <span class="day-number">DAY 4</span>
+          <span class="day-date">AUG 08</span>
         </div>
         <p class="day-route">十和田湖</p>
-        <ul class="day-activities">
-          <li>奧入瀨溪流步道（Oirase Gorge Walk）</li>
-          <li>附近用午餐</li>
-          <li>十和田神社（Towada Shrine）</li>
-          <li>環湖散步</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>奧入瀨溪流步道</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>附近午餐</li>
+              <li>十和田神社</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>湖邊散步・住宿休息</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 十和田湖</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 5 天</span>
-          <span class="day-date">8月9日</span>
+          <span class="day-number">DAY 5</span>
+          <span class="day-date">AUG 09</span>
         </div>
         <p class="day-route">十和田湖 &rarr; 八戶</p>
-        <ul class="day-activities">
-          <li>退房</li>
-          <li>城倉大橋（Jogakura Bridge）</li>
-          <li>沿途風景兜風</li>
-          <li>入住八戶</li>
-          <li>在 Miroku Yokocho 用晚餐</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>退房</li>
+              <li>城倉大橋</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>沿途風景兜風</li>
+              <li>&#127968; APA Hotel Honhachinohe</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>&#127858; Miroku Yokocho 晚餐</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 八戶</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 6 天</span>
-          <span class="day-date">8月10日</span>
+          <span class="day-number">DAY 6</span>
+          <span class="day-date">AUG 10</span>
         </div>
         <p class="day-route">八戶</p>
-        <ul class="day-activities">
-          <li>八食中心（Hasshoku Center）</li>
-          <li>海鮮午餐</li>
-          <li>蕪島神社（Kabushima Shrine）</li>
-          <li>自由活動夜晚</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>八食中心</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>&#127858; 海鮮午餐</li>
+              <li>蕪島神社</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>自由活動</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 八戶</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 7 天</span>
-          <span class="day-date">8月11日</span>
+          <span class="day-number">DAY 7</span>
+          <span class="day-date">AUG 11</span>
         </div>
         <p class="day-route">八戶 &rarr; 青森</p>
-        <ul class="day-activities">
-          <li>前往青森</li>
-          <li>歸還租賃車</li>
-          <li>A-FACTORY</li>
-          <li>採購蘋果製品</li>
-          <li>港區散步</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>前往青森</li>
+              <li>歸還租賃車</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>A-FACTORY</li>
+              <li>採購蘋果製品</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">晚上</p>
+            <ul class="day-activities">
+              <li>港區散步</li>
+              <li>&#127968; Daiwa Roynet Hotel Aomori</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>住宿：</span> 青森</p>
       </article>
 
       <article class="day-card">
         <div class="day-heading">
-          <span class="day-number">第 8 天</span>
-          <span class="day-date">8月12日</span>
+          <span class="day-number">DAY 8</span>
+          <span class="day-date">AUG 12</span>
         </div>
         <p class="day-route">青森 &rarr; 桃園</p>
-        <ul class="day-activities">
-          <li>早餐</li>
-          <li>最後採購</li>
-          <li>前往機場</li>
-          <li>長榮航空 BR121（EVA Air BR121）</li>
-        </ul>
+        <div class="day-timeline">
+          <div class="time-block">
+            <p class="time-label">上午</p>
+            <ul class="day-activities">
+              <li>早餐</li>
+              <li>最後採購</li>
+            </ul>
+          </div>
+          <div class="time-block">
+            <p class="time-label">下午</p>
+            <ul class="day-activities">
+              <li>前往機場</li>
+              <li>&#9992; 長榮航空 BR121</li>
+            </ul>
+          </div>
+        </div>
         <p class="day-stay"><span>行程結束</span></p>
       </article>
 
@@ -224,23 +342,23 @@
     <div class="highlights-grid">
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/kakunodate-samurai/600/450');"></div>
-        <p class="highlight-title">角館武家屋敷（Kakunodate Samurai District）</p>
+        <p class="highlight-title">角館武家屋敷</p>
       </div>
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/lake-tazawa/600/450');"></div>
-        <p class="highlight-title">田澤湖（Lake Tazawa）</p>
+        <p class="highlight-title">田澤湖</p>
       </div>
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/oirase-gorge/600/450');"></div>
-        <p class="highlight-title">奧入瀨溪流（Oirase Gorge）</p>
+        <p class="highlight-title">奧入瀨溪流</p>
       </div>
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/hasshoku-center/600/450');"></div>
-        <p class="highlight-title">八食中心（Hasshoku Center）</p>
+        <p class="highlight-title">八食中心</p>
       </div>
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/kabushima-shrine/600/450');"></div>
-        <p class="highlight-title">蕪島神社（Kabushima Shrine）</p>
+        <p class="highlight-title">蕪島神社</p>
       </div>
       <div class="highlight-card">
         <div class="highlight-image" style="background-image:url('https://picsum.photos/seed/a-factory/600/450');"></div>
